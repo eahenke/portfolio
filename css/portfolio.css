@@ -1,0 +1,104 @@
+html {
+	box-sizing: border-box;
+/*	overflow-y: scroll; */
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open-Sans', sans-serif;
+	background-color: #FFFFFD;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.projects {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.projects > h2 {
+	font-size: 2.5em;
+}
+
+.project {
+	height: 350px;
+	overflow: hidden;
+}
+
+.project-info > h2, .project-info > p {
+	opacity: 0.87;
+}
+
+.project-info > h2 {
+	font-size: 2.5em;
+}
+
+.project-img {
+	float:left; 
+	width: 50%;
+	height: 325px;
+	box-shadow: 2px 4px 8px #999;
+}
+
+.project-info {
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding-left: 2em;
+	padding-right: 1em;
+}
+
+.project-info > p {
+	margin-top: 1.5em;
+
+/*necessary?? VVV*/
+	line-height: 25px;
+}
+
+.tools {
+	list-style: none;
+	margin-top: 0.25em;
+}
+
+.tool-item {
+	display: inline-block;
+	margin-right: 1em;
+	margin-bottom: 0.5em;
+	padding: 0.25em 0.5em 0.25em 0.5em;
+
+	/*border: 2px solid #66BB6A;*/
+	border-radius: 8px;
+	background-color: #66BB6A;
+	color: white;
+	
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.nav {
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+	list-style: none;	
+}
+
+.nav-item {
+	display: inline-block;
+}
+
+.nav-item:hover {
+	color: #66BB6A;
+}
