@@ -23,28 +23,64 @@
 		<div class="work-link"><a href='#'>See my work</a></div>
 
 	</header>
-	<div class="projects">
-		<h2>Projects</h2>
-		<div class="project-wrap" data-bind="foreach: projectList">
+	<article class="main-container">
+		<section class="projects">
+			<h2>Projects</h2>
+			<div class="project-wrap" data-bind="foreach: projectList">
 
-			<!-- Project template -->
-			<div class="project">
-				<!-- replace w/ actual image, current placeholder -->
-				<!-- <div class="project-img"></div> -->
-				<img class="project-img" data-bind="attr: {src: imagePath, alt: title}" />
-				<div class="project-info">
-					<h2 data-bind="text: title"></h2>
-					<ul class="tools" data-bind="foreach: tools">
-						<li class="tool-item" data-bind="text: $data"></li>
-					</ul>
-					<p data-bind="text: description"></p>
+				<!-- Project template -->
+				<div class="project">
+					<!-- replace w/ actual image, current placeholder -->
+					<!-- <div class="project-img"></div> -->
+					<img class="project-img" data-bind="attr: {src: imagePath, alt: title}" />
+					<div class="project-info">
+						<h2 data-bind="text: title"></h2>
+						<ul class="tools" data-bind="foreach: tools">
+							<li class="tool-item" data-bind="text: $data"></li>
+						</ul>
+						<p data-bind="text: description"></p>
 
-				</div>
-			</div><!--End project-->
+					</div>
+				</div><!--End project-->
 
-		</div><!--End project-wrap-->
+			</div><!--End project-wrap-->
 
-	</div>
+		</section>
+
+		<section class="contact">
+			<h2>Contact</h2>
+			<div class="form-wrapper">
+				<form id="contact-form" method="POST" action="mailer.php">
+					<div class="field name-field">
+						<label for="name">Name *</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+
+					<div class="field email-field">
+						<label for="email">Email *</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+
+					<div class="field subject-field clear">
+						<label for="subject">Subject *</label>
+						<input type="text" id="subject" name="subject" required />
+					</div>
+
+					<div class="field message-field">
+						<label for="message">Message *</label>
+						<textarea id="message" name="message" required></textarea>
+					</div>
+
+					<div class="field button-field">
+						<button class='faux-button' type="submit">Send</button>
+					</div>
+					
+				</form>
+
+			</div>
+
+		</section>
+	</article>
 
 
 	<!-- Scripts -->
