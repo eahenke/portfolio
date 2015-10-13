@@ -1,6 +1,7 @@
+/*Accent color : #E65100*/
+
 html {
 	box-sizing: border-box;
-/*	overflow-y: scroll; */
 }
 
 *, *:before, *:after {
@@ -14,6 +15,12 @@ html, body {
 	background-color: #FFFFFD;
 }
 
+a {
+	text-decoration: none;
+	color: #91B6AF;
+	font-weight: bold;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
@@ -23,8 +30,83 @@ ul {
 	padding: 0;
 }
 
+header {
+	width: 100%;
+	min-height: 600px;
+	height: 100%;
+	background: url("../images/general/chicago.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+header a {
+	color: white;
+}
+
+header > h1 {
+	text-align: center;
+	padding-top: 1.6em;
+	font-size: 130px;
+	color: white;
+}
+
+header > h2 {
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
+
+.work-link {
+	width: 180px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	border-radius: 5px;
+	color: white;
+	/*background-color: #91B6AF;*/
+	/*background-color: #FB8C00;*/
+	/*background-color: #EF6C00;*/
+	
+	background-color: #E65100;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 60px;
+	vertical-align: middle;
+	transition: all 0.3s ease-in-out;
+}
+
+.work-link:hover {
+	transform: scale(1.1);
+}
+
+/*Nav*/
+
+.nav {
+	list-style: none;
+	float: left;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+.nav-item {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-right: 1em;
+}
+
+.nav-item > a {
+	transition: color 0.3s;
+}
+
+.nav-item > a:hover {
+	/*color: #FB8C00;*/
+	color: #E65100;
+}
 .projects {
-	width: 85%;
+	width: 1100px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -63,8 +145,6 @@ ul {
 
 .project-info > p {
 	margin-top: 1.5em;
-
-/*necessary?? VVV*/
 	line-height: 25px;
 }
 
@@ -81,24 +161,11 @@ ul {
 
 	/*border: 2px solid #66BB6A;*/
 	border-radius: 8px;
-	background-color: #66BB6A;
+	background-color: #91B6AF;
+	/*background-color: #FB8C00;*/
+	/*background-color: #E65100;*/
 	color: white;
 	
 	font-size: 0.9em;
 	font-weight: bold;
-}
-
-.nav {
-	/*position: absolute;
-	top: 0;
-	left: 0;*/
-	list-style: none;	
-}
-
-.nav-item {
-	display: inline-block;
-}
-
-.nav-item:hover {
-	color: #66BB6A;
 }
