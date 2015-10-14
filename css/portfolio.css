@@ -276,10 +276,9 @@ section > h2 {
 }
 
 .form-result {
-	position: absolute;
-	top: 25%;
-	left: 75%;
+	margin: 1em 0;
 	font-size: 1.2em;
+	text-align: center;
 	
 }
 

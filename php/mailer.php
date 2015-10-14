@@ -19,7 +19,7 @@ function send_mail() {
 			exit();
 		}
 
-		$recipient = "eahenke@yahoo.com";
+		$recipient = "eahenke@gmail.com";
 
 		//Email content
 		$email_content = "Name: $name\n";
@@ -28,18 +28,18 @@ function send_mail() {
 		$email_content .= "Message: \n$message\n";
 
 		//headers
-		// $email_header = "From: $name <$email>";
-		$from = "From: $email";
+		$email_header = "From: $name <$email>";
+		// $from = "From: $email";
 
 		//Send
-		if(mail($recipient, $subject, $email_content, $from)) {
+		if(mail($recipient, $subject, $email_content, $email_header)) {
 			//success
 			http_response_code(200);
-			echo "Success! Your message was sent";
+			echo "Success! Your message was sent.";
 		} else {
 			//server error
 			http_response_code(500);
-			echo "Uh oh, something went wrong. Your message could not be sent";
+			echo "Uh oh, something went wrong. Your message could not be sent.";
 		}
 
 	} else {
