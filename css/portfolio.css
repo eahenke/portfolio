@@ -283,13 +283,13 @@ section > h2 {
 	
 }
 
-.success:after {
-	content: '\2714 Success!';
+.success:before {
+	content: '\2714';
 	color: green;
 }
 
-.error:after {
-	content: '\2716 Error';
+.error:before {
+	content: '\2716';
 	color: red;
 }
 

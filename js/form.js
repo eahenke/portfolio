@@ -3,23 +3,22 @@
 	var formResult = form.find('.form-result');
 
 	form.submit(function(e) {
-		e.preventDefault;
+		e.preventDefault();
+		formResult.removeClass('success error');
 		var data = form.serialize();
 
 		$.ajax({
 			type: 'POST',
-			url: form.attr('action');
+			url: form.attr('action'),
 			data: data
-			
+
 		}).done(function(response) {
 			formResult.removeClass('error');
 			formResult.addClass('success');
 			formResult.text(response);
 
 			//clear all fields in form
-			form.children('.field').each(function(idx, field) {
-				field.val = '';
-			});
+			form.find('input, textarea').val('');
 
 		}).fail(function(data) {
 			formResult.removeClass('success');
