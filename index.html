@@ -13,14 +13,18 @@
 </head>
 <body>
 	<header>
-		<ul class="nav">
-			<li class="nav-item"><a href="#">Projects</a></li>
-			<li class="nav-item"><a href="#">About</a></li>
-			<li class="nav-item"><a href="#">Contact</a></li>
+		<ul class="nav" data-bind="foreach: navLinks">
+			<li class="nav-item"><a data-bind="text: name, click: $root.scrollTo"></a></li>
 		</ul>
 		<h1>Eric Henke</h1>
 		<h2>Front-end web developer in Chicago</h2>
-		<div class="work-link"><a href='#'>See my work</a></div>
+
+		<!-- Set binding context as projects link -->
+		<!-- ko with: navLinks()[0] -->
+		<div class="work-link" data-bind="click: $root.scrollTo">
+			<a>See my work</a>
+		</div>
+		<!-- /ko -->
 
 	</header>
 	<article class="main-container">
@@ -30,8 +34,7 @@
 
 				<!-- Project template -->
 				<div class="project">
-					<!-- replace w/ actual image, current placeholder -->
-					<!-- <div class="project-img"></div> -->
+					<!-- wrap img in link to project -->
 					<img class="project-img" data-bind="attr: {src: imagePath, alt: title}" />
 					<div class="project-info">
 						<h2 data-bind="text: title"></h2>
