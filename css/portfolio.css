@@ -1,5 +1,7 @@
 /*Accent color : #E65100*/
 
+/*General rules and resets*/
+
 html {
 	box-sizing: border-box;
 }
@@ -15,24 +17,52 @@ html, body {
 	background-color: #f1f1f1;
 }
 
+body {
+	position: relative;
+}
+
 a {
 	text-decoration: none;
 	color: #91B6AF;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 button {
 	border: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, label, p, ul {
 	margin: 0;
+	padding: 0;
+	opacity: 0.87;
 }
 
 ul {
 	margin: 0;
 	padding: 0;
 }
+
+/*Helper classes*/
+
+.hidden {
+	display: none;
+}
+
+.center {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* Header */
 
 header {
 	width: 100%;
@@ -42,6 +72,7 @@ header {
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 100%;
+	overflow: hidden;
 }
 
 header a {
@@ -50,7 +81,7 @@ header a {
 
 header > h1 {
 	text-align: center;
-	padding-top: 1.6em;
+	margin-top: 1.6em;
 	font-size: 130px;
 	color: white;
 }
@@ -118,16 +149,17 @@ header > h2 {
 /*Nav*/
 
 .nav {
-	list-style: none;
 	float: left;
 	margin-top: 1em;
 	margin-left: 1em;
+	list-style: none;
 }
 
 .nav-item {
 	display: inline-block;
 	font-size: 1.2em;
 	margin-right: 1em;
+	cursor: pointer;
 }
 
 .nav-item > a {
@@ -135,7 +167,6 @@ header > h2 {
 }
 
 .nav-item > a:hover {
-	/*color: #FB8C00;*/
 	color: #E65100;
 }
 
@@ -149,7 +180,7 @@ header > h2 {
 }
 
 section {
-	padding: 0 100px 0 100px;
+	padding: 0 100px 50px 100px;
 }
 
 section:nth-child(odd) {
@@ -215,6 +246,7 @@ section > h2 {
 .tools {
 	list-style: none;
 	margin-top: 0.25em;
+	opacity: 1;
 }
 
 .tool-item {
@@ -309,6 +341,54 @@ label {
 	color: #E65100;
 }
 
-.clear {
-	clear: both;
+
+/*Loading animation*/
+
+.ellipsis > span {
+  display: inline-block;
+  margin: 0.4em;
+  background-color: white;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  -moz-animation: hop 1s infinite ease-in-out;
+  -webkit-animation: hop 1s infinite ease-in-out;
+  animation: hop 1s infinite ease-in-out;
+}
+
+.ellipsis > span:nth-child(1) {
+  animation-delay: 0.2s;
+  
+}
+
+.ellipsis > span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.ellipsis > span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes hop {
+  0% {transform: translateY(0);}
+  40%, 50% {transform: translateY(66%);}
+  90%, 100% {transform: translateY(0);}
+}
+
+@-webkit-keyframes hop {
+  0% {-webkit-transform: translateY(0);}
+  40%, 50% {-webkit-transform: translateY(66%);}
+  90%, 100% {-webkit-transform: translateY(0);}
+}
+
+@-moz-keyframes hop {
+  0% {-moz-transform: translateY(0);}
+  40%, 60% {-moz-transform: translateY(66%);}
+  90%, 100% {-webkit-transform: translateY(0);}
+}
+
+@-o-keyframes hop {
+  0% {-o-transform: translateY(0);}
+  40%, 50% {-o-transform: translateY(66%);}
+  90%, 100% {-o-transform: translateY(0);}
 }
