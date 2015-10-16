@@ -23,8 +23,9 @@ body {
 
 a {
 	text-decoration: none;
-	color: #91B6AF;
-	font-weight: bold;
+	/*color: #91B6AF;*/
+	color: #A65100;
+	/*font-weight: bold;*/
 	cursor: pointer;
 }
 
@@ -36,6 +37,10 @@ h1, h2, h3, h4, h5, h6, label, p, ul {
 	margin: 0;
 	padding: 0;
 	opacity: 0.87;
+}
+
+p {
+	line-height: 25px;
 }
 
 ul {
@@ -157,8 +162,9 @@ header > h2 {
 
 .nav-item {
 	display: inline-block;
-	font-size: 1.2em;
 	margin-right: 1em;
+	font-size: 1.2em;
+	font-weight: bold;
 	cursor: pointer;
 }
 
@@ -181,6 +187,7 @@ header > h2 {
 
 section {
 	padding: 0 100px 50px 100px;
+	overflow: hidden;
 }
 
 section:nth-child(odd) {
@@ -266,14 +273,54 @@ section > h2 {
 	font-weight: bold;
 }
 
-/*Contact*/
+/* About */
 
-.contact {
-/*	background-color: #F7F7F7;*/
+.about-wrap {
+	position: relative;
+
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
-/*Contact form*/
+.me {
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 225px;
+	margin: 0 auto;
+	border-radius: 100%; 
+}
 
+.description {
+	display: inline-block;
+	float: left;
+	width: 60%;
+	margin-left: 2em;
+	
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.description > h2 {
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+.self-description {
+	/*display: inline-block;
+	float: left;
+	width: 60%;
+	margin-left: 2em;
+	
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);*/
+}
+
+/*Contact*/
 
 .form-wrapper {
 	width: 50%;
