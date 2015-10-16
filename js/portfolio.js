@@ -16,27 +16,53 @@ var ViewModel = function() {
 	self.navLinks = ko.observableArray([
 		{
 			name: 'Projects',
-			section: 'projects'
+			href: '#projects'
 
 		},
 		{
 			name: 'About',
-			section: 'about'
+			href: '#about'
 		},
 		{
 			name: 'Contact',
-			section: 'contact'
+			href: '#contact'
 		}
 	]);
 
 	//Scroll to a section when its nav link is clicked
+	/*
 	self.scrollTo = function(element, event) {
 		event.preventDefault();
 		console.dir(element);
-		var destination = element.section;	
+		var destination = $(element).attr('href');
+
+		// var destination = element.section;	
 		
 		$('.html, body').animate({
-			scrollTop: $('.' + destination).offset().top
+			scrollTop: $(destination).offset().top
+		}, 1000);
+	}
+	*/
+
+	self.scrollTo = function(element, event) {
+		event.preventDefault();
+		element = $(event.target);
+
+		if(element[0].tagName != 'A') {
+			console.log('is NOT a')
+			console.log(element);
+			var destination = element.find('a').attr('href');			
+			console.log(destination);
+		} else {
+			console.log('is a')
+			console.log(element);
+			var destination = element.attr('href');
+			console.log(destination);
+		}
+		// console.log(element);
+		// console.log(destination);
+		$('.html, body').animate({
+			scrollTop: $(destination).offset().top
 		}, 1000);
 	}
 
