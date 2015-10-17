@@ -96,7 +96,7 @@ ul {
 /* #E65100 - Warm orange */
 /* #91B6AF - Cool blue-grey */
 
-a, label, .nav-item > a:hover {
+a, label, .nav-item > a:hover, .social-item > a:hover {
 	color: #E65100;
 }
 
@@ -148,7 +148,7 @@ header > h2 {
 
 .nav {
 	float: left;
-	margin-top: 1em;
+	margin-top: 1.5em;
 	margin-left: 1em;
 }
 
@@ -160,8 +160,22 @@ header > h2 {
 	cursor: pointer;
 }
 
-.nav-item > a {
+.nav-item > a, .social-item > a {
 	transition: color 0.3s;
+}
+
+.social {
+	float: right;
+	margin-right: 1em;
+	margin-top: 1em;
+}
+
+.social-item {
+	display: inline-block;
+	margin-left: 0.5em;
+	font-size: 2em;
+	font-weight: bold;
+	cursor: pointer;	
 }
 
 /*Main*/
@@ -193,7 +207,7 @@ section > h2 {
 
 
 /*Projects*/
-.projects {
+#projects {
 	width: 100%;
 }
 

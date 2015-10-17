@@ -10,25 +10,35 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- Stylesheets -->
  	<link href="css/portfolio.css" rel="stylesheet" type="text/css" />
+ 	<link href="css/icons.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<header>
-		<ul class="nav" data-bind="foreach: navLinks">
-			<li class="nav-item"><a data-bind="text: name, click: $root.scrollTo"></a></li>
-		</ul>
+		<nav>
+			<ul class="nav" data-bind="foreach: navLinks">
+				<li class="nav-item" data-bind="click: $root.scrollTo">
+					<a data-bind="text: name, attr: {href: href}"></a>
+				</li>
+			</ul>
+
+			<ul class="social" data-bind="foreach: socialLinks">
+				<li class="social-item">
+					<a target="_blank" data-bind="css: icon, attr: {href: href}"></a>
+				</li>
+			</ul>
+		</nav>
+
 		<h1>Eric Henke</h1>
 		<h2>Front-end web developer in Chicago</h2>
-
-		<!-- Set binding context as projects link -->
-		<!-- ko with: navLinks()[0] -->
+		
 		<div class="work-link faux-button" data-bind="click: $root.scrollTo">
-			<a>See my work</a>
+			<a href="#projects">See my work</a>
 		</div>
-		<!-- /ko -->
+		
 
 	</header>
 	<article class="main-container">
-		<section class="projects">
+		<section id="projects">
 			<h2>Projects</h2>
 			<!-- ko foreach: projectList -->
 
@@ -48,7 +58,7 @@
 				<!-- /ko -->
 		</section>
 
-		<section class="about">
+		<section id="about">
 			<div class="about-wrap">
 				<img class="me" src="images/general/profile_pic.jpg" />
 				<div class="description center-vertical">
@@ -58,7 +68,7 @@
 			</div>
 		</section>
 		
-		<section class="contact clear">
+		<section id="contact" class="clear">
 			<h2>Contact</h2>
 			<div class="form-wrapper">
 				<form id="contact-form" method="POST" action="php/mailer.php">
