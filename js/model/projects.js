@@ -1,7 +1,7 @@
 var projects = [
 	{
 		"title": "Henke Stencils",
-		"description": "Online portfolio for my stencil and spraypaint artwork.",
+		"description": "I'm also an artist.  This is the online portfolio for my stencil and spraypaint artwork.",
 		"tools": ["HTML", "CSS", "PHP", "Javascript", "jQuery", "Responsive"],
 		"link": "http://www.henkestencils.com",
 		"github": "",
@@ -29,7 +29,7 @@ var projects = [
 
 	{
 		"title": "Battleship",
-		"description": "Play the classic boardgame against an AI opponent.  A play may choose to have their ships placed for them randomly, or they may select which ships to use and place them themselves.",
+		"description": "Play the classic boardgame against an AI opponent.  The AI will randomly guess until it hits a ship, and will then hunt down the rest of the ship before moving on.  A player may choose to have their ships placed for them randomly, or they may select which ships to use and place them themselves.",
 		"tools": ["HTML", "CSS", "Javascript", "jQuery", "Sass"],
 		"link": "projects/battleship",
 		"github": "http://github.com/eahenke/battleship",
@@ -38,7 +38,7 @@ var projects = [
 
 	{
 		"title": "Dominion Card Randomizer",
-		"description": "A tool to select random cards for the popular Dominion card game.  Various options allow a user to customize their random deck.",
+		"description": "A tool to select random cards for use in the popular Dominion card game.  Various options allow a user to require certain types of cards in their randomly generated deck.",
 		"tools": ["HTML", "CSS", "Javascript", "jQuery", "Responsive"],
 		"link": "projects/dominion",
 		"github": "https://github.com/eahenke/dominion",
