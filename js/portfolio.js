@@ -29,38 +29,35 @@ var ViewModel = function() {
 		}
 	]);
 
-	//Scroll to a section when its nav link is clicked
-	/*
-	self.scrollTo = function(element, event) {
-		event.preventDefault();
-		console.dir(element);
-		var destination = $(element).attr('href');
+	self.socialLinks = ko.observableArray([
+		{
+			name: 'Github',
+			href: 'http://github.com/eahenke',
+			icon: 'icon-github',
 
-		// var destination = element.section;	
-		
-		$('.html, body').animate({
-			scrollTop: $(destination).offset().top
-		}, 1000);
-	}
-	*/
+		},
 
-	self.scrollTo = function(element, event) {
+		{
+			name: 'Codepen',
+			href: 'http://codepen.io/eahenke',
+			icon: 'icon-codepen',
+
+		}
+	]);
+
+	//Scrolls to a section based on a link's href.  If the clicked element is not a link,
+	//it looks for the href of the first <a> child element.
+	self.scrollTo = function(el, event) {
 		event.preventDefault();
-		element = $(event.target);
+		var element = $(event.target);
+		var destination;
 
 		if(element[0].tagName != 'A') {
-			console.log('is NOT a')
-			console.log(element);
-			var destination = element.find('a').attr('href');			
-			console.log(destination);
-		} else {
-			console.log('is a')
-			console.log(element);
-			var destination = element.attr('href');
-			console.log(destination);
+			destination = element.find('a').first().attr('href');			
+		} else {			
+			destination = element.attr('href');
+			
 		}
-		// console.log(element);
-		// console.log(destination);
 		$('.html, body').animate({
 			scrollTop: $(destination).offset().top
 		}, 1000);
