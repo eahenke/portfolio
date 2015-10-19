@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Fifteen Puzzle</title>
+
+		<link href="https://webster.cs.washington.edu/images/fifteen/fifteen.gif"
+		      type="image/gif" rel="shortcut icon" />
+		
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="fifteen.css" type="text/css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<h1>Fifteen Puzzle</h1>
+
+		<p>
+			Un-jumble the fifteen squares
+			by repeatedly sliding squares into the empty space.
+			How quickly can you solve it?
+		</p>
+		
+		<div id="puzzlearea">
+		<!--
+			this area holds the actual fifteen puzzle pieces
+		-->
+		</div>
+
+		<div id="control-wrapper">
+			<div id="controls">
+				<button id="shufflebutton">Shuffle</button>
+
+				<fieldset>
+					<legend>Numbers On/Off</legend>
+					<div>
+						<label><input type="radio" name="numbers" value="block" checked="checked"/>On</label>
+						<label><input type="radio" name="numbers" value="none"/>Off</label>
+					</div>
+				</fieldset>
+
+
+				<fieldset>
+					<legend>Puzzle Size</legend>
+					
+					<select id="size">
+						<option value="3">3x3</option>
+						<option value="4" selected="selected">4x4</option>
+						<option value="5">5x5</option>
+						<option value="6">6x6</option>
+						<option value="7">7x7</option>
+						<option value="8">8x8</option>
+						<option value="9">9x9</option>
+					</select>
+				</fieldset>
+
+			</div>
+		</div>
+		
+		<div id="alternates">
+			<h2>Alternate puzzle images</h2>
+			
+			<div class="alt-img current">
+				<img src="images/dome.jpg" alt="Dome of the Rock" />
+				<span>Current</span>
+			</div>
+
+			<div class="alt-img">
+				<img src="images/delicatearch.jpg" alt="Delicate Arch" />
+				<span>Current</span>
+			</div>
+
+			<div class="alt-img">
+				<img src="images/dubrovnik.jpg" alt="Dubrovnik" />
+				<span>Current</span>
+			</div>
+
+			<div class="alt-img">
+				<img src="images/moscow.jpg" alt="Moscow" />
+				<span>Current</span>
+			</div>
+		</div>
+
+
+
+		<div id="win">
+			<p>Winner winner, chicken dinner!</p>
+		</div>
+
+		<p class="credit">This page originally created as a homework assignment for CSE 154 at the University of Washington.</p>
+
+		<script src="fifteen.js" type="text/javascript"></script>
+	</body>
+</html>
