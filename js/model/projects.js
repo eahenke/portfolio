@@ -23,7 +23,7 @@ var projects = [
 	{
 		"title": "Easy Grid",
 		"description": "A web app that generates CSS for a custom grid based on user input.  Users may use range inputs to select the number of columns, the space between columns, the space between rows, and the column padding.  A PHP script generates CSS that the user may copy and paste it into their project.",
-		"tools": ["HTML", "CSS", "PHP", "Javascript", "jQuery", "Sass"],
+		"tools": ["HTML", "CSS", "PHP", "Javascript", "jQuery", "Sass", "Responsive"],
 		"link": "projects/easygrid",
 		"codeLink": "http://github.com/eahenke/easygrid",
 		"codeLinkIcon": "github",
