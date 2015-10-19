@@ -1,0 +1,106 @@
+.single-board-wrap {
+  width: $board_size * 1px;
+  height: auto;
+  display: inline-block;
+
+  &:nth-of-type(1) {
+    float: left;
+  }
+
+  &:nth-of-type(2) {
+    float: right;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+}
+
+.board-wrap {
+  width: (($board_size * 2) + $board_margin) * 1px;
+  height: auto;
+  margin-left: $board_margin * 1px;
+  float: left;
+  overflow: hidden;
+}
+
+
+.board {
+  position: relative; 
+  width: $board_size * 1px;
+  height: $board_size * 1px;
+}
+
+.playable-area {
+  position: absolute;
+  top: $tile_size * 1px;
+  left: $tile_size * 1px;
+
+  width: ($tile_size * 10) * 1px;
+  height: ($tile_size * 10) * 1px;
+
+    .tile {
+
+      &:first-child {
+        border-top-left-radius: $board_border_radius;      
+      }
+
+      &:nth-child(10) {
+        border-top-right-radius: $board_border_radius;      
+      }
+
+      &:nth-child(91) {
+        border-bottom-left-radius: $board_border_radius;        
+      }
+
+      &:nth-child(100) {
+        border-bottom-right-radius: $board_border_radius;        
+      }
+
+
+    }
+
+
+}
+
+.tile {
+  width: $tile_size * 1px;
+  height: $tile_size * 1px;
+  float: left;
+
+  text-align: center;
+  font-size: 2em;
+
+}
+
+.row-label {
+  position: absolute;
+  top: $tile_size * 1px;
+  left: 0px;
+  height: $tile_size * 10 * 1px;
+  width: $tile_size * 1px;
+  overflow: hidden;
+}
+
+.column-label {
+  position: absolute;
+  top: 0px;
+  left: $tile_size * 1px;
+  height: $tile_size * 1px;
+  width: $tile_size * 10 * 1px;
+  overflow: hidden;
+}
+
+.clear {
+  clear: both;
+} 
+
+// Center on larger displays
+@media screen and (min-width: 1400px) {
+  .board-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+}

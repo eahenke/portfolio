@@ -45,13 +45,23 @@
 				<!-- Project template -->
 				<div class="project">
 					<!-- wrap img in link to project -->
-					<img class="project-img" data-bind="attr: {src: imagePath, alt: title}" />
+					<a class="project-img" data-bind="attr: {href: link}">
+						<img data-bind="attr: {src: imagePath, alt: title}" />
+					</a>
 					<div class="project-info">
 						<h2 data-bind="text: title"></h2>
 						<ul class="tools" data-bind="foreach: tools">
 							<li class="tool-item" data-bind="text: $data"></li>
 						</ul>
 						<p data-bind="text: description"></p>
+						<ul class="project-links">
+							<li class="demo-link">
+								<a data-bind="attr: {href: link}">See it in action</a>
+							</li>
+							<li class="code-link">
+								<a data-bind="attr: {href: codeLink}">See the code<span data-bind="css: icon"></span></a>
+							</li>
+						</ul>
 
 					</div>
 				</div><!--End project-->

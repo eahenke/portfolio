@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eat Drink Hyde Park</title>
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name = "author" content="Eric Henke" />
+
+	 <link rel="icon" type="image/png" href="images/eatdrink.png" />
+	<!-- fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div class='wrap'>
+		<aside>
+			<header>
+				<h1>Eat Drink <span>Hyde Park</span></h1>
+				<div class="filters" data-bind="foreach: filterList">
+					<a data-bind="text: text, click: $parent.setCurrentFilter, css: {selected: $parent.currentFilter() == $data}"></a>
+					
+				</div>
+			</header>
+			<ul class="places" data-bind="foreach: currentFilter().list">
+				<li class="place-item" data-bind="event: {click: $parent.setCurrentPlace}, css: {selected: $root.currentPlace() == $data}">
+					<span class='name' data-bind="text: name"></span>
+					<span class='price' data-bind="text: price"></span>
+					<br/>
+					<span class='rating' data-bind="text: rating"></span>
+				</li>
+
+			</ul>
+		</aside>
+		<div id="map"></div>
+
+		<div class="error hidden" data-bind="css: { hidden: !showError() }">
+			<h3>Whoops!</h3>
+			<p>There was a problem.	Error code: 
+				<span class="error-status" data-bind="text: errorCode"></span>. 
+				<br />
+				Try again later.
+			</p>
+			<a class='close' data-bind="click: hideError">X</a>
+		</div>
+	</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJdMCsjvpHGyg4PVTBRAq37eSScfral_I&libraries=places"
+  type="text/javascript"></script>
+  <script type="text/javascript" src='js/lib/knockout-3.3.0.js'></script>
+  <script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>

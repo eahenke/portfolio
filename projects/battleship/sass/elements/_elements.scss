@@ -1,0 +1,32 @@
+@import "buttons";
+
+@import "headings";
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  // background-color: #4DB8DB;
+  background-color: #9CE6FF;
+  font-family: $font_body;
+  overflow: auto;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+
+}
+
+body, html {
+  margin: 0;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

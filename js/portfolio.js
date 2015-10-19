@@ -4,8 +4,19 @@ var Project = function(project) {
 	self.description = ko.observable(project.description);
 	self.tools = ko.observableArray(project.tools);
 	self.link = ko.observable(project.link);
-	self.github = ko.observable(project.github);
+	self.codeLink = ko.observable(project.codeLink);
 	self.imagePath = ko.observable(project.imagePath);
+	
+	self.icon = ko.pureComputed(function() {
+		var iconType = project.codeLinkIcon;
+		if(iconType == 'github') {
+			return 'icon-github';
+		} else if(iconType == 'codepen') {
+			return 'icon-codepen';
+		} else {
+			return '';
+		}
+	});
 }
 
 var ViewModel = function() {

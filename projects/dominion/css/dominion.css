@@ -1,0 +1,129 @@
+/*ADD MOBILE SUPPORT*/
+
+html {
+	box-sizing: border-box;
+	overflow-y: scroll; 
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+article {
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1em;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	color: #333;
+}
+
+button {
+	font-size: 1.3em;
+	margin-top: 1em;
+	background: none;
+	box-shadow: none;
+	background-color: #ededed;
+	border-right: 1px solid #333;
+	border-bottom: 1px solid #333;
+	border-radius: 2px;
+	outline: none;
+	color: #333;
+	height: 50px;
+	width: 200px;
+}
+
+.disclaimer, .sets, .button-wrapper {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.disclaimer p {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.error-list {
+	font-size: 1.1em;
+}
+
+.error-list dd {
+	color: red;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 0.5em;
+}
+
+
+.inactive {
+	background-color: #CC0000;
+	border-color: #8F0000;
+	color: #333;
+}
+
+label {
+	width: 25%;
+	margin-right: 20px;
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+label span {
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+.output {
+	min-height: 250px;
+}
+
+.output p {
+	display: inline-block;
+	margin-right: 1em;
+	font-size: 1.1em;
+}
+
+.require {
+	font-size: 1.3em;
+}
+
+
+.invalid {
+	background-color: red;
+}
+
+
+
+@media all and (max-width: 800px) {
+	
+	input {
+		text-align: left;
+		margin-right: .5em;
+	}
+
+	label{
+		display: inline;
+		text-align: left;
+	}
+
+	.output p {
+		display: block;
+	}
+
+	.sets div {
+		margin-left: 0;
+		width: 100%;
+		text-align: left;
+	}
+}

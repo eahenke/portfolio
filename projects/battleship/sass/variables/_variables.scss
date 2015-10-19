@@ -1,0 +1,21 @@
+// Sizing
+
+$tile_size: 40;
+
+$board_size: $tile_size + ($tile_size * 10);
+$board_margin: $tile_size * 2;
+
+$board_border_radius: 25px;
+
+// Colors
+$board_color: #3399FF;
+$board_border_color: #297ACC;
+
+$ship_hit: #CC0000;
+$ship_color: gray;
+
+$board_miss: #0033CC;
+
+// Typography
+$font_heading: 'Press Start 2P';
+$font_body: 'Open Sans';
