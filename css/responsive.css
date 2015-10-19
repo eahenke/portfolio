@@ -1,0 +1,55 @@
+@media all and (max-width: 800px) {
+	article {
+		width: 95%;
+	}
+
+	section {
+		padding: 1em 0 2em 0;
+	}
+
+	section > h2 {
+		margin: 0 0 1rem 0;
+
+	}
+
+	/*Projects section*/
+
+	.project {
+		height: auto;
+		margin: 0;
+		padding: 0.5em 0.5em 0 0.5em;
+		/*box-shadow: 2px 4px 8px #999;*/
+	}
+
+	.project > h2 {
+		text-align: center;
+	}
+
+	.project + .project {
+		/*margin-top: 2em;*/
+		border-top: 1em solid #f1f1f1;
+	}
+
+
+	.project-img, .project-info {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	.project-img {
+		padding: 0;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.project-info {
+		padding: 1em 0;
+	}
+
+	/*Contact section*/
+
+	.form-wrapper {
+		width: 80%;
+	}
+}
