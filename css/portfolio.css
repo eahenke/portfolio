@@ -260,6 +260,32 @@ section > h2 {
 	font-weight: bold;
 }
 
+.project-links {
+	margin-top: 3em;
+	position: relative;
+}
+
+.project-links > li {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.project-links span {
+	font-size: 2em;
+	margin-left: 0.25em;
+}
+
+.demo-link {
+	left: 0;
+}
+
+.code-link {
+	right: 0;
+}
+
 /* About */
 
 .about-wrap {

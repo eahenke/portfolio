@@ -54,6 +54,14 @@
 							<li class="tool-item" data-bind="text: $data"></li>
 						</ul>
 						<p data-bind="text: description"></p>
+						<ul class="project-links">
+							<li class="demo-link">
+								<a data-bind="attr: {href: link}">See it in action</a>
+							</li>
+							<li class="code-link">
+								<a data-bind="attr: {href: codeLink}">See the code<span data-bind="css: icon"></span></a>
+							</li>
+						</ul>
 
 					</div>
 				</div><!--End project-->
