@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	    <title>Dominion Card Randomizer</title>
+	    <meta charset="utf-8" />
+	    <meta name="author" content="Eric Henke" />
+	    <meta name="description" content="Random card selector for Dominion" />
+	    <meta name="viewport" content="width=device-width" /> 
+
+	    <!-- fonts -->
+	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	 	<link href="css/dominion.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		
+		<h1>Dominion Card Randomizer</h1>
+
+		<article class="content">
+			<fieldset>
+
+				<legend>Sets:</legend>
+				<div>
+					<div class="sets">
+						<label><input type="checkbox" value="base" checked/>Base</label>
+						<label><input type="checkbox" value="intrigue"/>Intrigue</label>
+						<label><input type="checkbox" value="seaside"/>Seaside</label>
+						<label><input type="checkbox" value="alchemy"/>Alchemy</label>
+						<label><input type="checkbox" value="prosperity"/>Prosperity</label>
+						<label><input type="checkbox" value="cornucopia"/>Cornucopia</label>
+					</div>
+
+					<div class="sets">
+						<label><input type="checkbox" value="hinterlands"/>Hinterlands</label>
+						<label><input type="checkbox" value="dark ages"/>Dark Ages</label>
+						<label><input type="checkbox" value="guilds"/>Guilds</label>
+						<label><input type="checkbox" value="adventures"/>Adventures</label>
+						<label><input type="checkbox" value="promo"/>Promo</label>
+						<label><input type="checkbox" value="all"/>All</label>
+					</div>
+
+				</div>
+
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Options</legend>
+				<div>
+					<label><input type="checkbox" value="moat" />Include Moat if attack cards in Supply <span>(even if Base not selected)</span></label>
+					<div class="require">Require
+						<label><input type="checkbox" value="actions" />+2 actions</label>
+						<label><input type="checkbox" value="buys" />+1 buy</label>
+						<label><input type="checkbox" value="cards" />+2 cards</label>
+						<label><input type="checkbox" value="coins" />+2 coins</label>
+						<label><input type="checkbox" value="isCurser" />Curser</label>
+						<label><input type="checkbox" value="isTrasher" />Trasher</label>
+					</div>
+				</div>	
+			</fieldset>
+
+			<div class="button-wrapper">
+				<button class="get-cards active">Get cards</button>
+			</div>
+
+			<div class="output grid-container"></div>
+
+
+		</article>
+
+		<footer class="disclaimer">
+			<p>This script is not provided by nor endorsed by Donald X. Vaccarino or Rio Grande Games.</p>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src='js/domcards.js'></script>
+		<script src='js/dominion.js'></script>
+	</body>
