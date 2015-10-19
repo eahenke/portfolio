@@ -53,10 +53,10 @@
 						</ul>
 						<p data-bind="text: description"></p>
 						<ul class="project-links">
-							<li class="demo-link">
+							<li class="demo-link" data-bind="if: link">
 								<a data-bind="attr: {href: link}">See it in action</a>
 							</li>
-							<li class="code-link">
+							<li class="code-link" data-bind="if: codeLink">
 								<a data-bind="attr: {href: codeLink}">See the code<span data-bind="css: icon"></span></a>
 							</li>
 						</ul>

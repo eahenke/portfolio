@@ -3,8 +3,22 @@ var Project = function(project) {
 	self.title = ko.observable(project.title);
 	self.description = ko.observable(project.description);
 	self.tools = ko.observableArray(project.tools);
-	self.link = ko.observable(project.link);
-	self.codeLink = ko.observable(project.codeLink);
+	self.link = ko.pureComputed(function() {
+		if(project.link.length) {
+			return project.link;
+		} else {
+			return false;
+		}
+	});
+
+	self.codeLink = ko.pureComputed(function() {
+		if(project.codeLink.length) {
+			return project.codeLink;
+		} else {
+			return false;
+		}
+	});
+
 	self.imagePath = ko.observable(project.imagePath);
 	
 	self.icon = ko.pureComputed(function() {
