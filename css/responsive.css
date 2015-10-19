@@ -41,15 +41,40 @@
 		padding: 0;
 		margin-right: auto;
 		margin-left: auto;
+		height: 250px;
 	}
 
 	.project-info {
 		padding: 1em 0;
 	}
 
+	/*About section*/
+	.about-wrap {
+		width: 100%;
+	}
+	.me, .description {
+		display: block;
+		position: static;
+		transform: none;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.description {
+		width: 100%;
+		padding: 0.5em 0.5em 0 0.5em;
+	}
+
 	/*Contact section*/
 
 	.form-wrapper {
 		width: 80%;
+	}
+
+	.name-field, .email-field {
+		display: block;
+		width: 100%;
+		float: none;
+		padding: 0;
 	}
 }
