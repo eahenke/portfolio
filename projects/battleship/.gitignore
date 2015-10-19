@@ -1,0 +1,7 @@
+### Sass ###
+.sass-cache
+*.css.map
+css/
+
+### Notes ###
+todo.txt

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	    <title>Battleship</title>
+	    <meta charset="utf-8" />
+	    <meta name="author" content="Eric Henke" />
+	    <meta name="description" content="" />
+	    <meta name="viewport" content="width=device-width" /> 
+
+	    <!-- fonts -->
+	    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	    <!-- Icon -->
+	    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+
+	    <!-- Stylesheets -->
+	 	<link href="battleship.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+
+		<h1>BATTLESHIP</h1>
+
+		<div class="game-types">
+			<div class="logo-image">
+				<img src="images/battleship.png" alt="Battleship" />
+			</div>
+
+			<h2 class='game-choice'>Choose a game type</h2>
+			<dl class="game-description">
+				<dt>Standard</dt>
+				<dd>Classic Battleship with randomly placed ships</dd>
+
+				<dt>Custom</dt>
+				<dd>Choose any 5 ships and place them where you like.  The computer will have the same 5 ships, randomly placed</dd>
+			</dl>
+
+			<div class='button-wrapper'>
+				<button class="standard">Standard</button>
+				<button class="custom">Custom</button>
+			</div>
+		</div>
+
+		<div class='ship-picker'>
+			<h2>Pick 5 Ships</h2>
+			<h3>Selected ships</h3>
+			<ul class="ship-list">				
+				<li>
+					<p></p>
+					<div class='remove'>X</div>
+				</li>
+				<li>
+					<p></p>
+					<div class='remove'>X</div>
+				</li>
+				<li>
+					<p></p>
+					<div class='remove'>X</div>
+				</li>
+				<li>
+					<p></p>
+					<div class='remove'>X</div>
+				</li>
+				<li>
+					<p></p>
+					<div class='remove'>X</div>
+				</li>
+				
+			</ul>
+
+
+			<ul class='ship-choices button-wrapper'>
+				<li class="ship-choice">Carrier</li>
+				<li class="ship-choice">Battleship</li>
+				<li class="ship-choice">Submarine</li>
+				<li class="ship-choice">Cruiser</li>
+				<li class="ship-choice">Destroyer</li>
+			</ul>
+
+			<div class='button-wrapper'>
+				<button class='build-fleet inactive'>Build Fleet</button>
+			</div>
+		</div>
+
+		<div class="ship-placer">
+		
+			<div class="board placer-board">
+				<div class="labels">
+					<div class="row-label">
+						
+					</div>
+
+					<div class="column-label">
+						
+					</div>
+				</div><!--Labels-->
+
+				<div class="playable-area">
+
+
+				</div>
+			</div><!--board-->
+
+			<div class='ships-to-place'>
+				<h3>Ships to place</h3>
+				<ul>
+				</ul>
+			</div>
+
+			<div class="clear"></div>
+			<div class="instructions">
+				<p>Use 'WASD' keys to rotate pieces</p>
+			</div>
+
+			<div class='button-wrapper'>
+				<button class="start inactive">Start game</button>
+			</div>
+
+		</div>
+
+
+
+		<div class="game-area">
+			<div class="board-wrap">
+				<h1 class="hidden">BATTLESHIP</h1>
+				<div class="single-board-wrap">
+					
+					<div class="board human-board">
+					
+						
+
+						<div class="labels">
+							<div class="row-label">
+							
+							</div>
+
+							<div class="column-label">
+							
+							</div>
+						</div><!--Labels-->
+
+						<div class="playable-area">
+							
+							
+				
+						</div>
+					</div>
+					<h2>Human Board</h2>
+				</div> <!--single board wrapper-->
+
+				<div class="single-board-wrap">
+					<!-- <h2>AI Board</h2> -->
+					<div class="board ai-board">
+						
+						<div class="labels">
+							<div class="row-label">
+								
+							</div>
+
+							<div class="column-label">
+								
+							</div>
+						</div><!--Labels-->
+
+						<div class="playable-area">
+							
+							
+				
+						</div>
+					</div>
+					<h2>AI Board</h2>
+				</div><!--single board wrapper-->
+			
+				<div class="button-wrapper">
+					<button class="new-game">New Game</button>
+					<button class="stats hidden">Show Stats</button>
+				</div>
+
+			</div><!--board wrapper-->
+
+			<div class="info-area">
+				<h2>Enemy ships remaining</h2>
+				<div class="scoreboard">
+					<div class="ships-left">
+						
+					</div>
+				</div>
+				
+				<div class="gamelog-container">
+					<h2>GAME LOG</h2>
+				</div>	
+			</div>
+
+		</div><!--end game area-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/battleship.js"></script>
+
+	</body>

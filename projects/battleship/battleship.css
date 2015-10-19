@@ -1,0 +1,460 @@
+/* line 1, ../sass/elements/_buttons.scss */
+button {
+  width: 200px;
+  height: 75px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: white;
+  background-color: #297ACC;
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 14, ../sass/elements/_buttons.scss */
+button + button {
+  margin-left: 2em;
+}
+
+/* line 18, ../sass/elements/_buttons.scss */
+.button-wrapper {
+  margin-top: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* line 25, ../sass/elements/_buttons.scss */
+.inactive {
+  background-color: gray;
+}
+
+/* line 1, ../sass/elements/_headings.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Press Start 2P";
+  color: #E6E6E6;
+  text-transform: uppercase;
+  text-shadow: 3px 3px #000;
+}
+
+/* line 5, ../sass/elements/_elements.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 9, ../sass/elements/_elements.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 13, ../sass/elements/_elements.scss */
+body {
+  position: relative;
+  background-color: #9CE6FF;
+  font-family: "Open Sans";
+  overflow: auto;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+/* line 24, ../sass/elements/_elements.scss */
+body, html {
+  margin: 0;
+}
+
+/* line 28, ../sass/elements/_elements.scss */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1, ../sass/objects/board/_size.scss */
+.single-board-wrap {
+  width: 440px;
+  height: auto;
+  display: inline-block;
+}
+/* line 6, ../sass/objects/board/_size.scss */
+.single-board-wrap:nth-of-type(1) {
+  float: left;
+}
+/* line 10, ../sass/objects/board/_size.scss */
+.single-board-wrap:nth-of-type(2) {
+  float: right;
+}
+/* line 14, ../sass/objects/board/_size.scss */
+.single-board-wrap h2 {
+  text-align: center;
+}
+
+/* line 20, ../sass/objects/board/_size.scss */
+.board-wrap {
+  width: 960px;
+  height: auto;
+  margin-left: 80px;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 29, ../sass/objects/board/_size.scss */
+.board {
+  position: relative;
+  width: 440px;
+  height: 440px;
+}
+
+/* line 35, ../sass/objects/board/_size.scss */
+.playable-area {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 400px;
+  height: 400px;
+}
+/* line 45, ../sass/objects/board/_size.scss */
+.playable-area .tile:first-child {
+  border-top-left-radius: 25px;
+}
+/* line 49, ../sass/objects/board/_size.scss */
+.playable-area .tile:nth-child(10) {
+  border-top-right-radius: 25px;
+}
+/* line 53, ../sass/objects/board/_size.scss */
+.playable-area .tile:nth-child(91) {
+  border-bottom-left-radius: 25px;
+}
+/* line 57, ../sass/objects/board/_size.scss */
+.playable-area .tile:nth-child(100) {
+  border-bottom-right-radius: 25px;
+}
+
+/* line 67, ../sass/objects/board/_size.scss */
+.tile {
+  width: 40px;
+  height: 40px;
+  float: left;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* line 77, ../sass/objects/board/_size.scss */
+.row-label {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  height: 400px;
+  width: 40px;
+  overflow: hidden;
+}
+
+/* line 86, ../sass/objects/board/_size.scss */
+.column-label {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  height: 40px;
+  width: 400px;
+  overflow: hidden;
+}
+
+/* line 95, ../sass/objects/board/_size.scss */
+.clear {
+  clear: both;
+}
+
+@media screen and (min-width: 1400px) {
+  /* line 101, ../sass/objects/board/_size.scss */
+  .board-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+}
+/* line 3, ../sass/objects/board/_color.scss */
+.playable-area .tile {
+  background-color: #3399FF;
+  border: 2px solid #297ACC;
+}
+
+/* line 13, ../sass/objects/board/_color.scss */
+.board .ship.hit, .board .impossible {
+  background-color: #CC0000;
+}
+/* line 17, ../sass/objects/board/_color.scss */
+.board .miss {
+  background-color: #0033CC;
+}
+/* line 21, ../sass/objects/board/_color.scss */
+.board .potential {
+  background-color: green;
+}
+/* line 25, ../sass/objects/board/_color.scss */
+.board .placed {
+  background-color: gray;
+}
+
+/* line 33, ../sass/objects/board/_color.scss */
+.human-board .ship {
+  background-color: gray;
+}
+
+/* line 39, ../sass/objects/board/_color.scss */
+.hit {
+  background-color: red;
+}
+
+/* line 43, ../sass/objects/board/_color.scss */
+.ai-board .ship.end:not(.hit) {
+  background-color: gray;
+  transition: background-color 1.0s ease;
+}
+
+/* line 5, ../sass/objects/board/_board.scss */
+.game-area {
+  display: none;
+}
+
+/* line 1, ../sass/objects/infoarea/_infoarea.scss */
+.info-area {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  width: 250px;
+}
+/* line 7, ../sass/objects/infoarea/_infoarea.scss */
+.info-area h2 {
+  font-size: 1em;
+  margin-top: 0.5em;
+  text-align: right;
+  margin-right: 1em;
+}
+
+/* line 1, ../sass/objects/infoarea/_scoreboard.scss */
+.scoreboard {
+  height: 300px;
+  padding-right: 1em;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* line 10, ../sass/objects/infoarea/_scoreboard.scss */
+.hitpoint {
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 60%;
+  text-align: right;
+}
+
+/* line 1, ../sass/objects/infoarea/_gamelog.scss */
+.gamelog-container {
+  width: 250px;
+  height: 225px;
+}
+
+/* line 7, ../sass/objects/infoarea/_gamelog.scss */
+.gamelog {
+  float: right;
+  width: 250px;
+  height: 220px;
+  margin-top: 0em;
+  padding: 1em 1em .5em .5em;
+  overflow-y: auto;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+  border-radius: 5px;
+}
+
+/* line 3, ../sass/sections/_sections.scss */
+.hidden {
+  display: none;
+}
+
+/* line 7, ../sass/sections/_sections.scss */
+.clear {
+  clear: both;
+}
+
+/* line 12, ../sass/sections/_sections.scss */
+.game-choice {
+  margin-top: 0em;
+}
+
+/* line 16, ../sass/sections/_sections.scss */
+.game-description {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+/* line 20, ../sass/sections/_sections.scss */
+.game-description dt {
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-shadow: 1px 1px #000;
+}
+/* line 28, ../sass/sections/_sections.scss */
+.game-description dd {
+  margin-bottom: 1em;
+}
+
+/* line 35, ../sass/sections/_sections.scss */
+.ship-picker {
+  display: none;
+  width: 75%;
+  margin: auto;
+}
+
+/* line 43, ../sass/sections/_sections.scss */
+.ship-list li {
+  height: 1.5em;
+  width: 90%;
+  margin: 0.5em;
+  font-weight: bold;
+  border-bottom: 2px solid #297ACC;
+  list-style: none;
+}
+/* line 51, ../sass/sections/_sections.scss */
+.ship-list li p {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+/* line 58, ../sass/sections/_sections.scss */
+.ship-list li .remove {
+  display: inline-block;
+  float: right;
+  width: 15px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* line 73, ../sass/sections/_sections.scss */
+.ship-choice {
+  display: inline-block;
+  width: 125px;
+  height: 60px;
+  line-height: 60px;
+  margin: 1em;
+  padding: 0 1em 0 1em;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #297ACC;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 83, ../sass/sections/_sections.scss */
+.ship-choice.inactive {
+  background-color: gray;
+}
+
+/* line 89, ../sass/sections/_sections.scss */
+.ship-placer {
+  display: none;
+}
+/* line 93, ../sass/sections/_sections.scss */
+.ship-placer .board {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 100, ../sass/sections/_sections.scss */
+.ships-to-place {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  width: 250px;
+}
+/* line 106, ../sass/sections/_sections.scss */
+.ships-to-place ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 110, ../sass/sections/_sections.scss */
+.ships-to-place ul li {
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  line-height: 50px;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #297ACC;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 120, ../sass/sections/_sections.scss */
+.ships-to-place ul li.active {
+  background-color: green;
+}
+/* line 124, ../sass/sections/_sections.scss */
+.ships-to-place ul li.inactive {
+  background-color: gray;
+}
+
+/* line 131, ../sass/sections/_sections.scss */
+.instructions p {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+/* line 138, ../sass/sections/_sections.scss */
+.game-area {
+  overflow: hidden;
+  width: auto;
+}
+
+/* line 143, ../sass/sections/_sections.scss */
+.end-anim {
+  display: none;
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  height: 200px;
+}
+/* line 155, ../sass/sections/_sections.scss */
+.end-anim h3 {
+  font-size: 2em;
+}
+/* line 160, ../sass/sections/_sections.scss */
+.end-anim p {
+  text-align: center;
+  opacity: 1;
+}
+
+/* line 167, ../sass/sections/_sections.scss */
+.player-stats {
+  width: 45%;
+  display: inline-block;
+  background-color: #3399FF;
+  margin-left: 2em;
+  border-radius: 25px;
+  border: 3px solid #297ACC;
+  padding: 1em;
+}

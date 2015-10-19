@@ -1,0 +1,46 @@
+.playable-area {
+
+  .tile {
+    background-color: $board_color;
+    border: 2px solid $board_border_color;
+
+  }
+}
+
+
+.board {
+  
+  .ship.hit, .impossible {
+    background-color: $ship_hit;
+  }
+
+  .miss {
+    background-color: $board_miss;
+  }
+
+  .potential {
+    background-color: green;
+  }
+
+  .placed {
+    background-color: $ship_color;
+  }
+}
+
+
+.human-board {
+  
+  .ship {
+    background-color: $ship_color;
+  }
+
+}
+
+.hit {
+  background-color: red;
+}
+
+.ai-board .ship.end:not(.hit) {
+  background-color: $ship_color;
+  transition: background-color 1.0s ease;
+}
