@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* line 8, ../sass/_mixins.scss */
+.arrow, .slider-wrapper {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 16, ../sass/_mixins.scss */
+.arrow, .dot-wrapper {
+  z-index: 3;
+}
+
+@font-face {
+  font-family: 'slidericons';
+  src: url("../sass/icons/slidericons.eot?51532592");
+  src: url("../sass/icons/slidericons.eot?51532592#iefix") format("embedded-opentype"), url("../sass/icons/slidericons.woff?51532592") format("woff"), url("../sass/icons/slidericons.ttf?51532592") format("truetype"), url("../sass/icons/slidericons.svg?51532592#slidericons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'slidericons';
+    src: url('../font/slidericons.svg?51532592#slidericons') format('svg');
+  }
+}
+*/
+/* line 22, ../sass/icons/_slidericons.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "slidericons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 53, ../sass/icons/_slidericons.scss */
+.icon-left-open:before {
+  content: '\e804';
+}
+
+/* 'εáä' */
+/* line 54, ../sass/icons/_slidericons.scss */
+.icon-right-open:before {
+  content: '\e805';
+}
+
+/* 'εáà' */
+/*Slider Controls */
+/*Arrows */
+/* line 9, ../sass/_controls.scss */
+.arrow {
+  cursor: pointer;
+}
+
+/* line 14, ../sass/_controls.scss */
+.arrow.arrow-left {
+  left: 0;
+  color: white;
+  text-align: left;
+  font-size: 30pt;
+}
+
+/* line 18, ../sass/_controls.scss */
+.arrow.arrow-right {
+  right: 0;
+  color: white;
+  text-align: right;
+  font-size: 30pt;
+}
+
+/* Icons */
+/* line 23, ../sass/_controls.scss */
+.arrow span {
+  opacity: 0.7;
+}
+
+/* line 27, ../sass/_controls.scss */
+.arrow .clicked {
+  opacity: 1;
+}
+
+/* Dots */
+/* line 33, ../sass/_controls.scss */
+.dot-wrapper {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 41, ../sass/_controls.scss */
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* line 51, ../sass/_controls.scss */
+.dot.active {
+  background-color: white;
+}
+
+/* line 6, ../sass/slider.scss */
+body, html {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* line 13, ../sass/slider.scss */
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  /* For full screen */
+  /* width: 100%;
+  min-height: 100%; */
+  /*For set height and width */
+  width: 800px;
+  height: 600px;
+}
+
+/* line 28, ../sass/slider.scss */
+.slider {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 37, ../sass/slider.scss */
+.slide {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* line 47, ../sass/slider.scss */
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 53, ../sass/slider.scss */
+.slide.active, .slide.right, .slide.left {
+  z-index: 2;
+}
+
+/* line 57, ../sass/slider.scss */
+.slide.right {
+  left: 100%;
+}
+
+/* line 61, ../sass/slider.scss */
+.slide.left {
+  left: -100%;
+}
