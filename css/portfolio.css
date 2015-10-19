@@ -55,7 +55,9 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .center-vertical {
@@ -115,11 +117,12 @@ a, label, .nav-item > a:hover, .social-item > a:hover {
 header {
 	width: 100%;
 	min-height: 550px;
+	max-height: 700px;
 	height: 100%;
 	background: url("../images/general/chicago.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	overflow: hidden;
 }
 
@@ -189,7 +192,7 @@ header > h2 {
 }
 
 section {
-	padding: 2em 6em 3em 6em;
+	padding: 2em 100px 50px 100px;
 	overflow: hidden;
 }
 
@@ -409,15 +412,24 @@ label {
 
 .ellipsis > span:nth-child(1) {
   animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
   
 }
 
 .ellipsis > span:nth-child(2) {
   animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -o-animation-delay: 0.4s;
 }
 
 .ellipsis > span:nth-child(3) {
   animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
 }
 
 @keyframes drop-fade {
@@ -427,19 +439,19 @@ label {
 }
 
 @-webkit-keyframes drop-fade {
-  0% {transform: translateY(0);}
-  50%, 100% {transform: translateY(66%);}
+  0% {-webkit-transform: translateY(0);}
+  50%, 100% {-webkit-transform: translateY(66%);}
   90%, 100% {opacity: 0}
 }
 
 @-moz-keyframes drop-fade {
-  0% {transform: translateY(0);}
-  50%, 100% {transform: translateY(66%);}
+  0% {-moz-transform: translateY(0);}
+  50%, 100% {-moz-transform: translateY(66%);}
   90%, 100% {opacity: 0}
 }
 
 @-o-keyframes drop-fade {
-  0% {transform: translateY(0);}
-  50%, 100% {transform: translateY(66%);}
+  0% {-o-transform: translateY(0);}
+  50%, 100% {-o-transform: translateY(66%);}
   90%, 100% {opacity: 0}
 }

@@ -12,13 +12,51 @@
 
 	}
 
+	/*Header*/
+	
+	/*temp*/
+	nav {
+		/*display: none;*/
+	}
+
+	header {
+		min-height: 600px;
+		/*max-height: 450px;*/
+		height: 100%;
+	}
+
+	header > h1 {
+		font-size: 4em;
+		margin-top: 3em;
+	}
+
+	header > h2 {
+		font-size: 1.1em;
+	}
+
+	.work-link {
+		margin: 2.5em auto;
+		width: 40%;
+		height: 15%;
+		font-size: 1em;
+	}
+
+	.social, .nav {
+		float: none;
+	}
+
+	.social-item {
+		/*display: block;*/
+	}
+
+
+
 	/*Projects section*/
 
 	.project {
 		height: auto;
 		margin: 0;
 		padding: 0.5em 0.5em 0 0.5em;
-		/*box-shadow: 2px 4px 8px #999;*/
 	}
 
 	.project > h2 {
@@ -26,7 +64,6 @@
 	}
 
 	.project + .project {
-		/*margin-top: 2em;*/
 		border-top: 1em solid #f1f1f1;
 	}
 
