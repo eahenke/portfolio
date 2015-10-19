@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Easy Grids</title>
 	<meta charset='utf-8'/>
 	<meta name="author" content="Eric Henke">
-	<title>Easy Grids</title>
+	<meta name="viewport" content="width=device-width" /> 
 
 	 <link rel="icon" type="image/jpg" href="images/easy-icon.jpg" sizes="64x64">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -12,8 +13,18 @@
 </head>
 <body>
 
-	<div class="warning">
-		<p>Uh oh, your padding is larger than your column and you broke the grid!  Reduce either the number of columns or the gutter size or padding size.</p>
+	<div class="warning size-warning hidden">
+		<div class="warning-msg">
+			<p>Uh oh, your padding is larger than your column and you broke the grid!  Reduce either the number of columns or the gutter size or padding size.</p>
+			<p class="close"><a>I understand.</a></p>
+		</div>
+	</div>
+
+	<div class="warning android-warning hidden">
+		<div class="warning-msg">
+			<p>It looks like you're using Android's stock browser. You're welcome to use it, but your experience may be better on another browser.</p>
+			<p class="close"><a>I understand.</a></p>
+		</div>
 	</div>
 
 	<div class="main-wrap">

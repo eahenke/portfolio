@@ -155,6 +155,10 @@ h5 {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .output {
   border-radius: 50%;
   margin-left: auto;
@@ -217,7 +221,13 @@ pre, code {
 }
 
 .warning {
-  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.warning-msg {
+  // display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -229,6 +239,17 @@ pre, code {
   background-color: #002007;
   color: white;
   z-index: 1;
+}
+
+.warning-msg > .close {
+  text-align: center;
+  margin-top: 2em;
+
+  a {
+    cursor: pointer;
+  }
+
+
 }
 /*--------------------*/
 
@@ -250,3 +271,42 @@ pre, code {
 }
 
 
+@media all and (max-width: 800px) {
+  .main-wrap {
+    width: 95%;
+  }
+
+  .settings {
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    .slide-wrap {
+      margin: 0 auto;
+    }
+  }
+
+  .example {
+    width: 95%;
+  }
+
+  .warning-msg {
+    width: 80%;
+  }
+
+  .grid-code, .usage {
+    width: 85%;
+  }
+
+  pre, code {
+    font-size: 11px;
+    text-align: left;
+    word-wrap: break-word;
+    tab-size: 1;
+    -moz-tab-size: 1;
+    -o-tab-size: 1;
+
+  }
+}

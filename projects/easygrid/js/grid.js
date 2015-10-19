@@ -5,8 +5,27 @@
 		initialize();
 		$("[type=range]").change(initialize);
 		$("button").click(generate);
+		$('.close').click(close);
+		detectBrowser();
 
 	});
+
+	// Detects browser and displays a warning for Android's stock browser - 
+	// it doesn't handle range inputs very well.
+	function detectBrowser() {
+		var ua = navigator.userAgent;
+		var isNativeAndroid = ((ua.indexOf('Mozilla/5.0') > -1 && ua.indexOf('Android ') > -1 && ua.indexOf('AppleWebKit') > -1) && (ua.indexOf('Version') > -1));
+
+		if(isNativeAndroid) {
+			$('.android-warning').removeClass('hidden');
+		}	
+	}
+
+	function close(event) {
+		event.preventDefault();
+		var warning = $(this).parents('.warning');
+		$(warning).addClass('hidden');
+	}
 
 	function initialize() {
 		$(".row").empty();
@@ -64,11 +83,12 @@
 
 		if(inner.width() <= 0) {
 			$(inner).width(0);
-			$(".warning").show();
+			$(".size-warning").removeClass('hidden')
 		} else {
-			$(".warning").hide();
+			// $(".size-warning").addClass('hidden');
 		}		
 	}
+
 
 	function output() {
 		$(".output").each(function(index){
