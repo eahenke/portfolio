@@ -45,7 +45,9 @@
 				<!-- Project template -->
 				<div class="project">
 					<!-- wrap img in link to project -->
-					<img class="project-img" data-bind="attr: {src: imagePath, alt: title}" />
+					<a class="project-img" data-bind="attr: {href: link}">
+						<img data-bind="attr: {src: imagePath, alt: title}" />
+					</a>
 					<div class="project-info">
 						<h2 data-bind="text: title"></h2>
 						<ul class="tools" data-bind="foreach: tools">
