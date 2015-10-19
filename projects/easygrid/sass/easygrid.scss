@@ -1,0 +1,252 @@
+@import 'variables';
+@import 'mixins';
+@import 'normalize';
+
+#{$range} {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 5px 0;
+}
+
+#{$range}::-ms-fill-lower {
+  background: $light;
+  border-radius: 50px;
+}
+
+#{$range}::-ms-fill-upper {
+  background: $light;
+  border-radius: 50px;
+}
+
+#{$range} {
+
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include range-thumb;
+    margin-top: -5px;
+  }
+}
+
+#{$range}::-moz-range-thumb {
+  @include range-thumb;
+}
+
+#{$range}::-webkit-slider-runnable-track {
+  @include range-track;
+}
+
+#{$range}::moz-range-track {
+  @include range-track;
+}
+
+#{$range}::-ms-thumb {
+  @include range-thumb;
+}
+
+#{$range}::-ms-track {
+  @include range-track;
+  -ms-background: transparent;
+  -ms-border-color: transparent;
+  -ms-color: transparent;
+}
+
+#{range}:focus::-ms-fill-lower {
+  background: $light;
+}
+
+#{$range}:focus::-ms-fill-upper {
+  background: $light;
+}
+
+// --------------------------------
+
+/*Dark*/
+button, .main-wrap, .grid-code-wrap, .usage-wrap, .controls {
+  color: $dark;  
+  text-align: center;
+  
+}
+
+/*Light*/
+button, .example-wrap, .grid-code, .usage, .output {
+  background-color: $light;
+}
+
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  font-family: "Roboto Slab";
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+
+}
+
+.credit {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #09AB9C;
+}
+
+.credit:visited {
+  color: #09AB9C; 
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comment {
+  color: #757575;
+}
+
+.content {
+  color: #000000;
+  font-weight: bold;
+}
+
+.controls {
+  text-align: center;
+}
+
+div {
+  display: block;
+}
+
+.example {  
+  width: 1280px;
+  height: 300px;
+  margin: auto;
+}
+
+.example-wrap {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-code, .usage {
+  width: 70%;
+  height: 400px;
+  margin: auto;
+  margin-bottom: 15px;
+  overflow: scroll;
+
+}
+
+.grid-code-wrap, .usage-wrap {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+.output {
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding-top: 10px;
+  height: 50px;
+  width: 75px;
+}
+
+pre, code {
+  
+  text-align: left;
+  font-size: 18px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  tab-size: 3;
+  -moz-tab-size: 3;
+  -o-tab-size: 3;
+}
+
+.row {
+  // height: 100%;
+  width: 100%;
+}
+
+/*override the last margin - fix in js?*/
+.row > div:last-of-type {
+  margin-right: 0 !important;
+}
+
+/*Inner div, actual content appearance*/
+.row > div > div {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #419c55;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.settings {
+  display: inline-block;
+  padding: 15px;
+}
+
+.settings p {
+  font-size: 1em;
+}
+
+.slide-wrap {
+  width: 250px;
+}
+
+.submit {
+  padding: 1em;
+  text-align: center;
+}
+
+.warning {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);  
+  width: 600px;
+  padding: 2em;
+  border-radius: 25px;
+  background-color: #002007;
+  color: white;
+  z-index: 1;
+}
+/*--------------------*/
+
+/*Clearfix*/
+.row:before, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Out div, appearance of padding*/
+[class*='col-'] {
+  float: left;
+  background-color: #a0dba0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
