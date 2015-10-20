@@ -13,12 +13,6 @@
 	}
 
 	/*Header*/
-	
-	/*temp*/
-	nav {
-		/*display: none;*/
-	}
-
 	header {
 		min-height: 600px;
 		/*max-height: 450px;*/
@@ -45,17 +39,10 @@
 		float: none;
 	}
 
-	.social-item {
-		/*display: block;*/
-	}
-
-
-
 	/*Projects section*/
 
 	.project {
 		height: auto;
-		margin: 0;
 		padding: 0.5em 0.5em 0 0.5em;
 	}
 
@@ -83,6 +70,10 @@
 
 	.project-info {
 		padding: 1em 0;
+	}
+
+	.demo-link {
+		margin-right: 2em;
 	}
 
 	/*About section*/
