@@ -8,7 +8,8 @@
 	var puzzleSize = 4;
 	var emptyRow = puzzleSize -1;
 	var emptyCol = puzzleSize -1;
-	var tileSize = parseInt(400 / puzzleSize);
+	var puzzleHeight = document.getElementById('puzzlearea').offsetHeight;
+	var tileSize = parseInt(puzzleHeight / puzzleSize);
 	
 
 	//Creates a puzzle size control, attaches event handler to shuffle button and calls functions that create the initial board on load.
@@ -40,7 +41,7 @@
 	//Changes the size of the puzzle
 	function changeSize() {
 		puzzleSize = this.value;
-		tileSize = parseInt(400 / puzzleSize);
+		tileSize = parseInt(puzzleHeight / puzzleSize);
 		makeTiles();		
 	}
 

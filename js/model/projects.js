@@ -4,7 +4,7 @@ var projects = [
 		"description": "I'm also an artist.  This is the online portfolio for my stencil and spraypaint artwork.",
 		"tools": ["HTML", "CSS", "PHP", "Javascript", "jQuery", "Responsive"],
 		"link": "http://www.henkestencils.com",
-		"codeLink": "",
+		"codeLink": "http://github.com/eahenke/henkestencils",
 		"codeLinkIcon": "github",
 		"imagePath": "images/projectscreenshots/henkestencils.jpg"
 	},
@@ -63,7 +63,7 @@ var projects = [
 	{
 		"title": "Fifteen Puzzle",
 		"description": "A puzzle game: unjumble fifteen sliding tiles to win.  The user may also select from a variety of puzzle images, puzzle sizes, and difficulty levels.",
-		"tools": ["HTML", "CSS", "Javascript"],
+		"tools": ["HTML", "CSS", "Javascript", "Responsive"],
 		"link": "projects/fifteen",
 		"codeLink": "http://github.com/eahenke/fifteen",
 		"codeLinkIcon": "github",
