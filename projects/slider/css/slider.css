@@ -146,6 +146,7 @@ body, html {
   min-height: 100%; */
   /*For set height and width */
   width: 800px;
+  height: 600px;
 }
 
 /* line 32, ../sass/slider.scss */
