@@ -48,23 +48,6 @@
 		
 		//Dots must be set up first
 		this.dots = this.context.find('.dot');
-
-		//Initial set up
-
-		//If no slide set as active, set the first as active
-		if(!this.context.find('.slide.active').length) {
-			this.context.find('.slide').first().addClass('active');
-		}
-
-		//Create the correct number of dot controls
-		var slideNum = this.context.find('.slide').length;
-		var dots = [];
-		var dotWrapper = $('<div>').addClass('dot-wrapper').appendTo(this.context);
-		for(var i = 0; i < slideNum; i++) {
-			dots.push('<div class="dot"></div>');
-		}
-		dots = dots.join('');
-		dotWrapper.append(dots);
 	}
 	window.Slider = Slider;
 
