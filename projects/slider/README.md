@@ -30,13 +30,13 @@ You may give any slide a class of `active`, and the slider will start with that 
 
 
 ### Setting the size
-The `slider-wrapper` class should have a fixed height and width, the same size as the images in the slider.
+You may give the `slider-wrapper` class a fixed width and height, ideally the same ratio as the images in your slider.  If you do not set a width, it will default to 100% of the containing element.  If you do not set a height, it will be set to auto.  It's advised to set width and height explicitly.
 ####Using Sass
 In `sass/_variables.scss`, set `$slide-width` and `$slide-height` to your images' dimensions.
 ####Using CSS
 In `css/slider.css` give `.slider-wrapper` a width and height that correspond to your image. 
 
-## Control
+## Controls
 The code
 
 ```html

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 8, ../sass/_mixins.scss */
-.arrow, .slider-wrapper {
+.arrow, .vertical-center {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -136,7 +136,7 @@ body, html {
   margin: 0;
 }
 
-/* line 13, ../sass/slider.scss */
+/* line 17, ../sass/slider.scss */
 .slider-wrapper {
   position: relative;
   overflow: hidden;
@@ -146,10 +146,9 @@ body, html {
   min-height: 100%; */
   /*For set height and width */
   width: 800px;
-  height: 600px;
 }
 
-/* line 28, ../sass/slider.scss */
+/* line 32, ../sass/slider.scss */
 .slider {
   position: relative;
   list-style: none;
@@ -159,7 +158,7 @@ body, html {
   padding: 0;
 }
 
-/* line 37, ../sass/slider.scss */
+/* line 41, ../sass/slider.scss */
 .slide {
   height: 100%;
   width: 100%;
@@ -170,23 +169,33 @@ body, html {
   z-index: 1;
 }
 
-/* line 47, ../sass/slider.scss */
+/* line 51, ../sass/slider.scss */
 .slide img {
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
-/* line 53, ../sass/slider.scss */
+/* line 58, ../sass/slider.scss */
 .slide.active, .slide.right, .slide.left {
   z-index: 2;
 }
 
-/* line 57, ../sass/slider.scss */
+/* line 62, ../sass/slider.scss */
 .slide.right {
   left: 100%;
 }
 
-/* line 61, ../sass/slider.scss */
+/* line 66, ../sass/slider.scss */
 .slide.left {
   left: -100%;
+}
+
+@media all and (max-width: 800px) {
+  /* line 71, ../sass/slider.scss */
+  .slider-wrapper {
+    width: 100%;
+    height: auto;
+    /*Will cause js to base height on img element*/
+  }
 }
