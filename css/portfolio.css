@@ -13,6 +13,7 @@ html, body {
 	padding: 0;
 	font-family: 'Open-Sans', sans-serif;
 	background-color: #f1f1f1;
+	height: 100%;
 }
 
 body {
@@ -379,6 +380,28 @@ label {
 	margin-bottom: 0.5em;
 	font-size: 1.1em;
 }
+
+/* 404 page*/
+.error-404 {
+	height: 100%;
+	text-align: center;
+}
+
+.error-404 h1 {
+	text-align: center;
+	font-size: 4em;
+}
+
+.error-404 > section {
+	margin-top: 2em;
+	height: 100%;
+}
+
+.msg-404 {
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+
 
 
 /*Loading animation*/
