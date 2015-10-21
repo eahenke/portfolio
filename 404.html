@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Eric Henke?</title>
+	<title>Eric Henke</title>
 	<meta charset="utf-8" />
 	<meta name="author" content="Eric Henke" />
 	<meta name="viewport" content="width=device-width" /> 
@@ -14,25 +14,28 @@
  	<link href="css/responsive.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	
-	<article class="main-container error-404">
-		<section>
-			<h1>404</h1>
-			<!-- <h2>Page not found</h2>
-			<p class="msg-404">It seems you've gotten lost.  How about we go back <a href="index.html">home</a>?</p> -->
+	<header>
+		<nav>
+			<ul class="nav" data-bind="foreach: navLinks">
+				<li class="nav-item">
+					<a data-bind="text: name, attr: {href: 'index.html' + href}"></a>
+				</li>
+			</ul>
 
-			<pre>
-				<code>
-					if(pageDoesNotExist) {
-						display(404);
-				}
+			<ul class="social" data-bind="foreach: socialLinks">
+				<li class="social-item">
+					<a target="_blank" data-bind="css: icon, attr: {href: href}"></a>
+				</li>
+			</ul>
+		</nav>
 
-				</code>
-			</pre>
-
-		</section>
+		<h1>404</h1>
+		<h2>Uh oh, you've gotten lost. The page you're looking for doesn't exist.</h2>
 		
-	</article>
+		<div class="work-link faux-button">
+			<a href="index.html">Take me home</a>
+		</div>
+	</header>
 
 
 	<!-- Scripts -->
