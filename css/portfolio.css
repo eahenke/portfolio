@@ -124,7 +124,8 @@ header a {
 
 header > h1 {
 	text-align: center;
-	margin-top: 1.6em;
+	/*margin-top: 1.6em;*/
+	margin-top: 1.95em;
 	font-size: 130px;
 	color: white;
 }
