@@ -264,16 +264,21 @@ section > h2 {
 }
 
 .project-links > li {
-	display: inline;
+	display: inline-block;
+	width: 48%;
 	height: 40px;
-	vertical-align: bottom;
+	line-height: 40px;
 	font-size: 1.1rem;
 	font-weight: bold;
 	white-space: nowrap;
 }
 
 .demo-link {
-	margin-right: 45%;
+	text-align: left;
+}
+
+.code-link {
+	text-align: right;
 }
 
 .project-links span {

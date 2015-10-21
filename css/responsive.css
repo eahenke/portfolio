@@ -15,7 +15,6 @@
 	/*Header*/
 	header {
 		min-height: 600px;
-		/*max-height: 450px;*/
 		height: 100%;
 	}
 
@@ -70,10 +69,6 @@
 
 	.project-info {
 		padding: 1em 0;
-	}
-
-	.demo-link {
-		margin-right: 2em;
 	}
 
 	/*About section*/
