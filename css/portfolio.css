@@ -124,7 +124,6 @@ header a {
 
 header > h1 {
 	text-align: center;
-	/*margin-top: 1.6em;*/
 	margin-top: 1.95em;
 	font-size: 130px;
 	color: white;
@@ -381,29 +380,6 @@ label {
 	margin-bottom: 0.5em;
 	font-size: 1.1em;
 }
-
-/* 404 page*/
-.error-404 {
-	height: 100%;
-	text-align: center;
-}
-
-.error-404 h1 {
-	text-align: center;
-	font-size: 4em;
-}
-
-.error-404 > section {
-	margin-top: 2em;
-	height: 100%;
-}
-
-.msg-404 {
-	margin-top: 1em;
-	font-size: 1.2em;
-}
-
-
 
 /*Loading animation*/
 .ellipsis {
