@@ -25,6 +25,12 @@
 
 		//Initial set up
 
+		//If no height set, give height based on image descendent		
+		if(!this.context.height()) {
+			var height = this.context.find('img').first().height();		
+			this.context.height(height);
+		}
+		
 		//If no slide set as active, set the first as active
 		if(!this.context.find('.slide.active').length) {
 			this.context.find('.slide').first().addClass('active');

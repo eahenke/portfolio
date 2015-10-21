@@ -53,7 +53,7 @@ var projects = [
 	{
 		"title": "Slider",
 		"description": "A sliding, controllable image carousel.  The slider begins automatically, but users may skip to the next slide, go to the previous slide, or skip to a specific slide.",
-		"tools": ["HTML", "CSS", "Javascript", "jQuery", "Sass"],
+		"tools": ["HTML", "CSS", "Javascript", "jQuery", "Sass", "Responsive"],
 		"link": "projects/slider",
 		"codeLink": "http://github.com/eahenke/slider",
 		"codeLinkIcon": "github",
