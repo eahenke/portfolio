@@ -43,8 +43,11 @@ function send_mail() {
 		}
 
 	} else {
-		//Not post request
+		//In the case that it's not a post request - ie, direct url access, set code as forbidden and redirect to not found.
 		http_response_code(403);
-		echo "There was a problem with your submission.  Please try again.";
+		// echo "There was a problem with your submission.  Please try again.";
+
+
+		header("Location: /error/404.html")
 	}
 }?>
