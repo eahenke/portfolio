@@ -48,6 +48,6 @@ function send_mail() {
 		// echo "There was a problem with your submission.  Please try again.";
 
 
-		header("Location: /error/404.html")
+		header("Location: /error-pages/404.html");
 	}
 }?>
