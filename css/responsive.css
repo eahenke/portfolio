@@ -18,15 +18,19 @@
 		height: 100%;
 	}
 
-	header > h1 {
+	.header-content {
+		top: 49%;
+	}
+
+	.header-content > h1 {
 		font-size: 4em;
-		margin-top: 3em;
 	}
 
-	header > h2 {
+	.header-content > h2 {
 		font-size: 1.1em;
+		
 	}
-
+	
 	.work-link {
 		margin: 2.5em auto;
 	}
