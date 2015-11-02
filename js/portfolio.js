@@ -67,6 +67,12 @@ var ViewModel = function() {
 			href: 'http://codepen.io/eahenke',
 			icon: 'icon-codepen',
 
+		},
+
+		{
+			name: 'LinkedIn',
+			href: 'https://www.linkedin.com/pub/eric-henke/108/a19/779',
+			icon: 'icon-linkedin',
 		}
 	]);
 
