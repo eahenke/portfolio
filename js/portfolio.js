@@ -82,7 +82,6 @@ var ViewModel = function() {
 		event.preventDefault();
 		var element = $(event.target);
 		var destination;
-		console.log('something');
 
 		if(element[0].tagName != 'A') {
 			destination = element.find('a').first().attr('href');			
