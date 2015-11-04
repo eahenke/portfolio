@@ -82,14 +82,18 @@ var ViewModel = function() {
 		event.preventDefault();
 		var element = $(event.target);
 		var destination;
+		console.log('something');
 
 		if(element[0].tagName != 'A') {
 			destination = element.find('a').first().attr('href');			
+			console.log('not link');
+			console.log(destination);
 		} else {			
 			destination = element.attr('href');
-			
+			console.log('link');
+			console.log(destination);
 		}
-		$('.html, body').animate({
+		$('html, body').animate({
 			scrollTop: $(destination).offset().top
 		}, 1000);
 	}
