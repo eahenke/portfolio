@@ -1,0 +1,20 @@
+<div class="weather-wrap" ng-controller="WeatherCtrl as weather">
+    <div class="weather-widget {{weather.dayOrNight}}">
+
+        <h2 class="city"> {{ weather.currentCity }} </h2>
+        
+        <clock timezone="{{weather.timezone}}"></clock>
+        
+        <ul class="wthr-result">
+            <li class="wthr-icon {{weather.iconClass}}"></li>
+            <li class="wthr-descrip"> {{ weather.currentWeather }} </li>
+        </ul>
+
+        <p class="temp" ng-bind="weather.currentTemp | temperature"></p>
+
+        <form name="searchForm" ng-submit="searchForm.$valid && weather.searchByCity(weather.newCity)">
+            <input type="text" placeholder="Search for a city" ng-model="weather.newCity" required>
+            <button type="submit"><span class="icon-search"></span></button>
+        </form>
+    </div>
+</div>  

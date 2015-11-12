@@ -19,6 +19,16 @@ var projects = [
 		"imagePath": "images/projectscreenshots/eatdrinkhydepark.jpg"
 	},
 
+	{
+		"title": "Weather App",
+		"description": "A responsive weather app built with Angular that gets a user's location and displays the current local weather.  Users may also search for the weather in other cities.  If the user's location is disabled, defaults to Chicago.",
+		"tools": ["HTML", "CSS", "Sass", "Javascript", "AngularJS", "Gulp", "OpenWeatherMap API", "GeoNames API", "Responsive"],
+		"link": "projects/weatherapp",
+		"codeLink": "http://github.com/eahenke/weatherapp",
+		"codeLinkIcon": "github",
+		"imagePath": "images/projectscreenshots/weatherapp.jpg"
+	},
+
 
 	{
 		"title": "Easy Grid",
